@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard - Lens Club</title>
+    <link rel="stylesheet" href="Lens-style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="header-brand">
+                <img src="LensClub.png" alt="Lens Club Logo" width="100">
+                <h2>LENS CLUB</h2>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="club-offerings.html">Club Offerings</a>
+                <a href="AboutLensClub.html">About Us</a>
+                <a class="active" href="member-dashboard.html">Member Dashboard</a>
+                <a href="manager-dashboard.html">Manager Dashboard</a>
+            </nav>
+
+             <div class="header-actions">
+                <button type="button" id="menu-button"><img src="menu.png" alt="Open menu"></button>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+
+        <section class="shaded-heading">
+            <h1>Member Dashboard</h1>
+            <p>Welcome back! Here are your participation requests.</p>
+        </section>
+
+        <section class="member-profile">
+            <img src="Sara.png" alt="Sara Ahmed" class="member-profile-photo">
+            <div>
+                <h2>Sara Ahmed</h2>
+                <p>Portrait Photography</p>
+                <p>sara@lensclub.com</p>
+            </div>
+			
+        </section>
+		<section class="member-quick-actions">
+    <a href="request-to-join.html" class="member-btn">
+        + Request to Join an Offering
+    </a>
+
+    <a href="offering-evaluation.html" class="member-btn">
+        Offering Evaluation
+    </a>
+		</section>
+		
+        <section class="member-requests">
+            <div class="member-section-heading">
+                <h2>My Participation Requests</h2>
+                
+            </div>
+
+            <table class="member-table">
+                <thead>
+                    <tr>
+                        <th>Offering</th>
+                        <th>Request Date</th>
+                        <th>Cost</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="member-offering-item">
+                                <div class="member-offering-image">
+                                    <img src="mobile-photography.jpg" alt="Mobile Photography Workshop">
+                                </div>
+                                <span>Mobile Photography Workshop</span>
+                            </div>
+                        </td>
+                        <td>Sep 15, 2026</td>
+                        <td>100 SAR</td>
+                        <td><span class="member-status">Pending</span></td>
+                        <td>
+                            <a class="member-details-btn" href="club-offerings.html#mobile-photography">
+                                View Details
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="member-offering-item">
+                                <div class="member-offering-image">
+                                    <img src="portrait-photography.jpg" alt="Portrait Photography Class">
+                                </div>
+                                <span>Portrait Photography Class</span>
+                            </div>
+                        </td>
+                        <td>Sep 5, 2026</td>
+                        <td>150 SAR</td>
+                        <td><span class="member-status">Completed</span></td>
+                        <td>
+                            <a class="member-btn" href="offering-evaluation.html">
+                                Evaluate
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="member-offering-item">
+                                <div class="member-offering-image">
+                                    <img src="outdoor-photo-walk.jpg" alt="Outdoor Photo Walk">
+                                </div>
+                                <span>Outdoor Photo Walk</span>
+                            </div>
+                        </td>
+                        <td>Aug 25, 2026</td>
+                        <td>0 SAR</td>
+                        <td><span class="member-status">Declined</span></td>
+                        <td>
+                            <a class="member-details-btn" href="club-offerings.html#outdoor-photo-walk">
+                                View Details
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="member-offering-item">
+                                <div class="member-offering-image">
+                                    <img src="photo-editing-workshop.jpg" alt="Photo Editing Workshop">
+                                </div>
+                                <span>Photo Editing Workshop</span>
+                            </div>
+                        </td>
+                        <td>Aug 10, 2026</td>
+                        <td>100 SAR</td>
+                        <td><span class="member-status">Completed</span></td>
+                        <td>
+                            <a class="member-btn" href="offering-evaluation.html">
+                                Evaluate
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="member-discover">
+            <div class="member-discover-content">
+                <img class="member-camera-icon" src="camera.png" alt="">
+                <div>
+                    <h3>Discover More Offerings</h3>
+                    <p>Join new workshops and activities to develop your skills.</p>
+                </div>
+            </div>
+
+            <a class="member-btn" href="club-offerings.html">
+                Browse Offerings &rarr;
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-social">
+                <h2>Social Media</h2>
+                <p><a href='https://www.facebook.com/'><img src='facebook.png' alt=''> Facebook</a></p>
+                <p><a href='https://www.linkedin.com/'><img src='linkedin.png' alt=''> LinkedIn</a></p>
+                <p><a href='https://www.instagram.com/'><img src='instagram.png' alt=''> Instagram</a></p>
+                <p><a href='https://x.com/'><img src='X.png' alt=''> X</a></p>
+            </div>
+
+            <div class="footer-club">
+                <h2>LENS CLUB</h2>
+                <p>PEOPLE · PLACES · PERSPECTIVES</p>
+            </div>
+
+            <div class="footer-contact">
+            <h2>Contact Us</h2>
+
+                <p> <img src="phone.png" alt="Phone">
+                <a href="tel:+966555655555">+966 555655555</a></p>
+                <p><img src="email.png" alt="Email">
+                <a href="mailto:LensClub@lensclub.com">LensClub@lensclub.com</a></p>
+                <p><img src="location.png" alt="Location">
+                <a href="https://www.google.com/maps/search/?api=1&query=King+Saud+University+Riyadh" target="_blank">
+                King Saud University - Riyadh </a></p>
+            </div>
+
+        </div>
+
+        <p class="copyright">&copy; LENS CLUB 2026. All rights reserved.</p>
+    </footer>
+
+    <script src="theme.js"></script>
+    
+</body>
+
+</html>

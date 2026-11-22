@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lens Club</title>
+    <link rel="stylesheet" href="Lens-style.css">
+    <script src="about-validation.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="header-content">
+            <div class="header-brand">
+                <img src="LensClub.png" alt="Lens Club Logo" width="100">
+                <h2>LENS CLUB</h2>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="club-offerings.html">Club Offerings</a>
+                <a class="active" href="AboutLensClub.html">About Us</a>
+                <a href="member-dashboard.html">Member Dashboard</a>
+                <a href="manager-dashboard.html">Manager Dashboard</a>
+            </nav>
+
+             <div class="header-actions">
+                <button type="button" id="menu-button"><img src="menu.png" alt="Open menu"></button>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+
+        <!-- About Lens Club -->
+        <section class="hero">
+            <div class="hero-content">
+                <p>A PHOTOGRAPHY CLUB</p>
+                <h1>About<br>Lens Club</h1>
+
+                <p>
+                    Lens Club brings photography enthusiasts together
+                    to learn new skills, explore creativity, and share
+                    their passion for photography through workshops,
+                    classes, and activities.
+                </p>
+
+                <a href="#join-team">Join Our Community &rarr;</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="AboutLensClub.png" alt="Photography Club" width="420">
+            </div>
+        </section>
+
+        <!-- Our Mission -->
+        <section class="mission">
+            <div class="mission-text">
+                <h2>Our Mission</h2>
+
+                <p>
+                    Our mission is to encourage creativity, learning,
+                    and connection by creating a supportive community
+                    where members can develop photography skills,
+                    share experiences, and connect with others
+                    who have the same interest.
+                </p>
+            </div>
+
+            <div class="mission-features">
+                <div>
+                    <img src="Learn.png" alt="Learn" width="50">
+                    <h3>Learn</h3>
+                    <p>New skills</p>
+                </div>
+
+                <div>
+                    <img src="Connect.png" alt="Connect" width="50">
+                    <h3>Connect</h3>
+                    <p>With a community</p>
+                </div>
+
+                <div>
+                    <img src="Grow.png" alt="Grow" width="50">
+                    <h3>Grow</h3>
+                    <p>Your creativity</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Our Instructors -->
+        <section class="instructors">
+            <h2>Meet Our Instructors</h2>
+
+            <div class="instructors-list" id="instructor-list">
+
+                <div class="card">
+                    <img src="Sara.png" alt="Sara Ahmed" width="180">
+
+                    <h3>
+                        <a href="InstructorProfile.html">Sara Ahmed</a>
+                    </h3>
+
+                    <p>Portrait Photography</p>
+
+                    <a href="InstructorProfile.html">
+                        View Profile &rarr;
+                    </a>
+                </div>
+
+                <div class="card">
+                    <img src="Omar.png" alt="Omar Khaled" width="180">
+
+                    <h3>
+                        <a href="OmarProfile.html">Omar Khaled</a>
+                    </h3>
+
+                    <p>Mobile Photography</p>
+
+                    <a href="OmarProfile.html">
+                        View Profile &rarr;
+                    </a>
+                </div>
+
+                <div class="card">
+                    <img src="Lama.png" alt="Lama Ali" width="180">
+
+                    <h3>
+                        <a href="LamaProfile.html">Lama Ali</a>
+                    </h3>
+
+                    <p>Photo Editing</p>
+
+                    <a href="LamaProfile.html">
+                        View Profile &rarr;
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Join Our Team -->
+        <section class="join-team" id="join-team">
+
+            <div class="join-text">
+                <h2>Join Our Team</h2>
+
+                <p>
+                    Are you passionate about photography?
+                    Join Lens Club as an activity leader or instructor
+                    and share your knowledge, skills, and experience
+                    with our photography community.
+                </p>
+            </div>
+
+           <form id="joinTeamForm" onsubmit="return validateJoinTeam();" novalidate> 
+                <div class="form-fields">
+
+                    <div class="form-column">
+                        <label for="full-name">Full Name*</label>
+                        <input type="text" id="full-name" name="full-name" class='form-field' required>
+
+                        <label for="date-of-birth">Date of Birth</label>
+                        <input type="date" id="date-of-birth" name="date-of-birth" class='form-field'>
+
+                        <label for="expertise">Area of Expertise</label>
+                        <select id="expertise" name="expertise" class='form-field'>
+                            <option value="">Select</option>
+                            <option value="portrait">Portrait Photography</option>
+                            <option value="mobile">Mobile Photography</option>
+                            <option value="editing">Photo Editing</option>
+                        </select>
+
+                        <label for="education">Education</label>
+                        <textarea id="education" name="education" rows="3" class='form-field'></textarea>
+                    </div>
+
+                    <div class="form-column">
+                        <label for="photo">Photo</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" class='form-field' required>
+
+                        <label for="skills">Skills</label>
+                        <textarea id="skills" name="skills" rows="3" class='form-field'></textarea>
+
+                        <button type="submit">Submit</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-social">
+                <h2>Social Media</h2>
+                <p><a href='https://www.facebook.com/'><img src='facebook.png' alt=''> Facebook</a></p>
+                <p><a href='https://www.linkedin.com/'><img src='linkedin.png' alt=''> LinkedIn</a></p>
+                <p><a href='https://www.instagram.com/'><img src='instagram.png' alt=''> Instagram</a></p>
+                <p><a href='https://x.com/'><img src='X.png' alt=''> X</a></p>
+            </div>
+
+            <div class="footer-club">
+                <h2>LENS CLUB</h2>
+                <p>PEOPLE · PLACES · PERSPECTIVES</p>
+            </div>
+
+            
+            <div class="footer-contact">
+            <h2>Contact Us</h2>
+
+                <p> <img src="phone.png" alt="Phone">
+                <a href="tel:+966555655555">+966 555655555</a></p>
+                <p><img src="email.png" alt="Email">
+                <a href="mailto:LensClub@lensclub.com">LensClub@lensclub.com</a></p>
+                <p><img src="location.png" alt="Location">
+                <a href="https://www.google.com/maps/search/?api=1&query=King+Saud+University+Riyadh" target="_blank">
+                King Saud University - Riyadh </a></p>
+            </div>
+
+         </div>
+
+
+        
+
+        <p class="copyright">&copy; LENS CLUB 2026. All rights reserved.</p>
+    </footer>
+
+    <script src="theme.js"></script>
+    
+</body>
+
+</html>

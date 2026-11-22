@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Offering - Lens Club</title>
+    <link rel="stylesheet" href="Lens-style.css">
+<script src="add-new-offering.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-brand">
+                <img src="LensClub.png" alt="Lens Club Logo" width="100">
+                <h2>LENS CLUB</h2>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="club-offerings.html">Club Offerings</a>
+                <a href="AboutLensClub.html">About Us</a>
+                <a href="member-dashboard.html">Member Dashboard</a>
+                <a class="active" href="manager-dashboard.html">Manager Dashboard</a>
+            </nav>
+
+             <div class="header-actions">
+                <button type="button" id="menu-button"><img src="menu.png" alt="Open menu"></button>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Page Heading -->
+        <section class="shaded-heading">
+
+            <p class="breadcrumb">
+                <a href='manager-dashboard.html'>MANAGER DASHBOARD</a>
+                ▸ ADD A NEW OFFERING
+            </p>
+
+            <h1>Add a New Offering</h1>
+
+        </section>
+
+        <!-- Offering Form -->
+        <section class="admin-panel">
+
+            <form class="admin-form" novalidate>
+
+                <!-- Offering Name -->
+                <div class="admin-field">
+                    <label for="offering-name">
+                        Offering Name
+                    </label>
+
+                    <input type="text" id="offering-name" name="offering-name" class='form-field' required>
+                </div>
+
+                <!-- Offering Image -->
+                <div class="admin-field">
+                    <label for="offering-image">
+                        Offering Image
+                    </label>
+
+                    <div class="offering-upload-row">
+                        
+                        <input type="file" id="offering-image" name="offering-image" accept="image/*" required>
+
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="admin-field">
+                    <label for="offering-price">
+                        Price / Registration Fee
+                    </label>
+
+                    <input type="number" id="offering-price" name="offering-price" min="0" step="0.01" class='form-field' required>
+                </div>
+
+                <!-- Description -->
+                <div class="admin-field">
+                    <label for="offering-description">
+                        Description
+                    </label>
+
+                    <textarea id="offering-description" name="offering-description" rows="5" class='form-field' required></textarea>
+                </div>
+
+                <!-- Buttons -->
+                <div class="admin-form-actions">
+
+                    <a href="manager-dashboard.html" class="cancel-button">
+                        Cancel
+                    </a>
+
+                    <button type="submit">Add Offering</button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-social">
+                <h2>Social Media</h2>
+                <p><a href='https://www.facebook.com/'><img src='facebook.png' alt=''> Facebook</a></p>
+                <p><a href='https://www.linkedin.com/'><img src='linkedin.png' alt=''> LinkedIn</a></p>
+                <p><a href='https://www.instagram.com/'><img src='instagram.png' alt=''> Instagram</a></p>
+                <p><a href='https://x.com/'><img src='X.png' alt=''> X</a></p>
+            </div>
+
+            <div class="footer-club">
+                <h2>LENS CLUB</h2>
+                <p>PEOPLE · PLACES · PERSPECTIVES</p>
+            </div>
+
+            <div class="footer-contact">
+            <h2>Contact Us</h2>
+
+                <p> <img src="phone.png" alt="Phone">
+                <a href="tel:+966555655555">+966 555655555</a></p>
+                <p><img src="email.png" alt="Email">
+                <a href="mailto:LensClub@lensclub.com">LensClub@lensclub.com</a></p>
+                <p><img src="location.png" alt="Location">
+                <a href="https://www.google.com/maps/search/?api=1&query=King+Saud+University+Riyadh" target="_blank">
+                King Saud University - Riyadh </a></p>
+            </div>
+
+        </div>
+
+        <p class="copyright">&copy; LENS CLUB 2026. All rights reserved.</p>
+    </footer>
+
+    <script src="theme.js"></script>
+    
+</body>
+
+</html>

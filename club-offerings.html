@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Offerings - Lens Club</title>
+    <link rel="stylesheet" href="Lens-style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-brand">
+                <img src="LensClub.png" alt="Lens Club Logo" width="100">
+                <h2>LENS CLUB</h2>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a class="active" href="club-offerings.html">Club Offerings</a>
+                <a href="AboutLensClub.html">About Us</a>
+                <a href="member-dashboard.html">Member Dashboard</a>
+                <a href="manager-dashboard.html">Manager Dashboard</a>
+            </nav>
+
+             <div class="header-actions">
+                <button type="button" id="menu-button"><img src="menu.png" alt="Open menu"></button>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Introduction -->
+        <section class="shaded-heading">
+            <h1>Club Offerings</h1>
+            <p>
+                Explore our photography workshops,
+                classes, and activities.
+            </p>
+        </section>
+
+        <!-- Sorting Options -->
+        <section class="offerings-controls">
+            <label for="sort-offerings">Sort By:</label>
+
+            <select id="sort-offerings" name="sort-offerings">
+                <option value="">Select sorting option</option>
+
+                <optgroup label="Price">
+                    <option value="price-low">Low to High</option>
+                    <option value="price-high">High to Low</option>
+                </optgroup>
+
+                <optgroup label="Name">
+                    <option value="name-az">A to Z</option>
+                    <option value="name-za">Z to A</option>
+                </optgroup>
+            </select>
+        </section>
+
+        <!-- Photography Offerings -->
+        <section class="offerings-section">
+
+            <div class="offerings-container">
+
+                <!-- Offering 1 -->
+                <article class="card" id="mobile-photography">
+                    <img src="mobile-photography.jpg" alt="Mobile Photography Workshop">
+
+                    <div class="offering-info">
+                        <h2>Mobile Photography Workshop</h2>
+                        <p>
+                            Learn how to take better photos
+                            using your phone.
+                        </p>
+
+                        <p class="card-meta">
+                            <img src="calendar.png" alt=""> 2026
+                            <img src="cash.png" alt=""> 100 SAR
+                            <a href="request-to-join.html">Join</a>
+                        </p>
+
+                        <div class="offering-extra">
+                            <p>
+                                Learn composition, lighting,
+                                and mobile camera techniques.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Offering 2 -->
+                <article class="card" id="portrait-photography">
+                    <img src="portrait-photography.jpg" alt="Portrait Photography Class">
+
+                    <div class="offering-info">
+                        <h2>Portrait Photography Class</h2>
+                        <p>
+                            Learn the basics of portrait
+                            photography and lighting.
+                        </p>
+
+                        <p class="card-meta">
+                            <img src="calendar.png" alt=""> 2026
+                            <img src="cash.png" alt=""> 150 SAR
+                            <a href="request-to-join.html">Join</a>
+                        </p>
+
+                        <div class="offering-extra">
+                            <p>
+                                Practice portrait composition
+                                and professional lighting.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Offering 3 -->
+                <article class="card" id="outdoor-photo-walk">
+                    <img src="outdoor-photo-walk.jpg" alt="Outdoor Photo Walk">
+
+                    <div class="offering-info">
+                        <h2>Outdoor Photo Walk</h2>
+                        <p>
+                            Practice photography outdoors
+                            with other club members.
+                        </p>
+
+                        <p class="card-meta">
+                            <img src="calendar.png" alt=""> 2026
+                            <img src="cash.png" alt=""> 0 SAR
+                            <a href="request-to-join.html">Join</a>
+                        </p>
+
+                        <div class="offering-extra">
+                            <p>
+                                Explore locations and improve
+                                outdoor photography skills.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Offering 4 -->
+                <article class="card" id="photo-editing">
+                    <img src="photo-editing-workshop.jpg" alt="Photo Editing Workshop">
+
+                    <div class="offering-info">
+                        <h2>Photo Editing Workshop</h2>
+                        <p>
+                            Learn the basics of photo editing
+                            and improve your photos.
+                        </p>
+
+                        <p class="card-meta">
+                            <img src="calendar.png" alt=""> 2026
+                            <img src="cash.png" alt=""> 100 SAR
+                            <a href="request-to-join.html">Join</a>
+                        </p>
+
+                        <div class="offering-extra">
+                            <p>
+                                Discover editing techniques,
+                                colors, and photo enhancement.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-social">
+                <h2>Social Media</h2>
+                <p><a href='https://www.facebook.com/'><img src='facebook.png' alt=''> Facebook</a></p>
+                <p><a href='https://www.linkedin.com/'><img src='linkedin.png' alt=''> LinkedIn</a></p>
+                <p><a href='https://www.instagram.com/'><img src='instagram.png' alt=''> Instagram</a></p>
+                <p><a href='https://x.com/'><img src='X.png' alt=''> X</a></p>
+            </div>
+
+            <div class="footer-club">
+                <h2>LENS CLUB</h2>
+                <p>PEOPLE · PLACES · PERSPECTIVES</p>
+            </div>
+
+             <div class="footer-contact">
+            <h2>Contact Us</h2>
+
+                <p> <img src="phone.png" alt="Phone">
+                <a href="tel:+966555655555">+966 555655555</a></p>
+                <p><img src="email.png" alt="Email">
+                <a href="mailto:LensClub@lensclub.com">LensClub@lensclub.com</a></p>
+                <p><img src="location.png" alt="Location">
+                <a href="https://www.google.com/maps/search/?api=1&query=King+Saud+University+Riyadh" target="_blank">
+                King Saud University - Riyadh </a></p>
+            </div>
+
+
+        </div>
+
+        <p class="copyright">&copy; LENS CLUB 2026. All rights reserved.</p>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="offerings-sort.js"></script>
+    
+</body>
+
+</html>

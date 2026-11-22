@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard - Lens Club</title>
+    <link rel="stylesheet" href="Lens-style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="header-brand">
+                <img src="LensClub.png" alt="Lens Club Logo" width="100">
+                <h2>LENS CLUB</h2>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="club-offerings.html">Club Offerings</a>
+                <a href="AboutLensClub.html">About Us</a>
+                <a href="member-dashboard.html">Member Dashboard</a>
+                <a class="active" href="manager-dashboard.html">Manager Dashboard</a>
+            </nav>
+
+             <div class="header-actions">
+                <button type="button" id="menu-button"><img src="menu.png" alt="Open menu"></button>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <section class="shaded-heading">
+            <h1>Manager Dashboard</h1>
+            <p>Welcome back! Here are your club management tools.</p>
+        </section>
+
+        <div class="manager-actions">
+            <a href="add-new-offering.html">
+                <img src='add.png' alt=''>
+                <span>Add a New Offering</span>
+                <span class="manager-action-arrow">&rarr;</span>
+            </a>
+
+            <a href="manage-instructors.html">
+                <img src='manage.png' alt=''>
+                <span>Manage Activity Leaders &amp; Instructors</span>
+                <span class="manager-action-arrow">&rarr;</span>
+            </a>
+        </div>
+
+        <section class="manager-offerings">
+            <h2>My Offerings</h2>
+
+            <table class="manager-offerings-table">
+                <thead>
+                    <tr>
+                        <th>Offering</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="manager-offerings-body">
+</tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-social">
+                <h2>Social Media</h2>
+                <p><a href='https://www.facebook.com/'><img src='facebook.png' alt=''> Facebook</a></p>
+                <p><a href='https://www.linkedin.com/'><img src='linkedin.png' alt=''> LinkedIn</a></p>
+                <p><a href='https://www.instagram.com/'><img src='instagram.png' alt=''> Instagram</a></p>
+                <p><a href='https://x.com/'><img src='X.png' alt=''> X</a></p>
+            </div>
+
+            <div class="footer-club">
+                <h2>LENS CLUB</h2>
+                <p>PEOPLE · PLACES · PERSPECTIVES</p>
+            </div>
+
+             <div class="footer-contact">
+            <h2>Contact Us</h2>
+
+                <p> <img src="phone.png" alt="Phone">
+                <a href="tel:+966555655555">+966 555655555</a></p>
+                <p><img src="email.png" alt="Email">
+                <a href="mailto:LensClub@lensclub.com">LensClub@lensclub.com</a></p>
+                <p><img src="location.png" alt="Location">
+                <a href="https://www.google.com/maps/search/?api=1&query=King+Saud+University+Riyadh" target="_blank">
+                King Saud University - Riyadh </a></p>
+            </div>
+
+        </div>
+
+        <p class="copyright">&copy; LENS CLUB 2026. All rights reserved.</p>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const tableBody = document.getElementById("manager-offerings-body");
+
+    let offerings = [];
+
+    try {
+        offerings = JSON.parse(localStorage.getItem("managerOfferings")) || [];
+
+        if (!Array.isArray(offerings)) {
+            offerings = [];
+        }
+    } catch (error) {
+        offerings = [];
+    }
+
+    tableBody.innerHTML = "";
+
+    if (offerings.length === 0) {
+        const row = document.createElement("tr");
+        const cell = document.createElement("td");
+
+        cell.colSpan = 2;
+        cell.textContent = "No offerings added yet.";
+
+        row.appendChild(cell);
+        tableBody.appendChild(row);
+    } else {
+        offerings.forEach(function (offering) {
+            const row = document.createElement("tr");
+            const nameCell = document.createElement("td");
+            const priceCell = document.createElement("td");
+
+            const item = document.createElement("div");
+            item.className = "manager-offering-item";
+
+            if (offering.image) {
+                const imageBox = document.createElement("div");
+                imageBox.className = "manager-offering-image";
+
+                const image = document.createElement("img");
+                image.src = offering.image;
+                image.alt = offering.name || "Offering image";
+
+                imageBox.appendChild(image);
+                item.appendChild(imageBox);
+            }
+
+            const name = document.createElement("span");
+            name.textContent = offering.name || "Unnamed offering";
+
+            item.appendChild(name);
+            nameCell.appendChild(item);
+
+            priceCell.textContent = offering.price + " SAR";
+
+            row.appendChild(nameCell);
+            row.appendChild(priceCell);
+            tableBody.appendChild(row);
+        });
+    }
+});
+</script>
+</body>
+
+</html>

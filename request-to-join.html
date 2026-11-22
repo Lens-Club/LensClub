@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request to Join - Lens Club</title>
+    <link rel="stylesheet" href="Lens-style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="header-brand">
+                <img src="LensClub.png" alt="Lens Club Logo" width="100">
+                <h2>LENS CLUB</h2>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="club-offerings.html">Club Offerings</a>
+                <a href="AboutLensClub.html">About Us</a>
+                <a class="active" href="member-dashboard.html">Member Dashboard</a>
+                <a href="manager-dashboard.html">Manager Dashboard</a>
+            </nav>
+
+             <div class="header-actions">
+                <button type="button" id="menu-button"><img src="menu.png" alt="Open menu"></button>
+            </div>
+            
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="shaded-heading">
+
+            <p class="breadcrumb">
+                <a href="member-dashboard.html">MEMBER DASHBOARD</a> ▸
+                REQUEST TO JOIN
+            </p>
+
+
+            <h1>Request to Join an Offering</h1>
+            <p>Fill in the details below to submit your participation request.</p>
+        </section>
+
+        <div class="request-container">
+
+            <section class="request-offering">
+
+                <div class="request-offering-image">
+                    <img src="mobile-photography.jpg" alt="Mobile Photography Workshop">
+                </div>
+
+                <div class="request-offering-details">
+                    <h2>Mobile Photography Workshop</h2>
+
+                    <p>Learn how to take better photos using your phone.</p>
+
+                    <p><span>Date:</span> Oct 12, 2026</p>
+                    <p><span>Cost:</span> 100 SAR</p>
+                    <p><span>Type:</span> Workshop</p>
+                    <p><span>Location:</span> Lens Club Center</p>
+                </div>
+
+            </section>
+
+            <h2 id='your-information'>Your Information</h2>
+            <section class="request-form request-form-box">
+
+                <form class="request-info-form" novalidate>
+                    <p class="request-form-row">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" class='form-field' required>
+                    </p>
+
+                    <p class="request-form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class='form-field' required>
+                    </p>
+
+                    <p class="request-form-row">
+                        <label for="offering">Offering</label>
+                        <select id="offering" name="offering" class='form-field' required>
+                            <option value="">Select an Offering</option>
+                            <option value="mobile">Mobile Photography Workshop</option>
+                            <option value="portrait">Portrait Photography Class</option>
+                            <option value="outdoor">Outdoor Photo Walk</option>
+                            <option value="editing">Photo Editing Workshop</option>
+                        </select>
+                    </p>
+
+                    <p class="request-form-row">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" class='form-field' required>
+                    </p>
+
+                    <p class="request-form-row">
+                        <label for="notes">Additional Notes (optional)</label>
+                        <textarea id="notes" name="notes" rows="4" class='form-field' placeholder="Any additional information..."></textarea>
+                    </p>
+
+                    <div class="request-form-actions">
+                        <a href="club-offerings.html" class="cancel-button">Cancel</a>
+                        <button type="submit">Submit Request</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-social">
+                <h2>Social Media</h2>
+                <p><a href='https://www.facebook.com/'><img src='facebook.png' alt=''> Facebook</a></p>
+                <p><a href='https://www.linkedin.com/'><img src='linkedin.png' alt=''> LinkedIn</a></p>
+                <p><a href='https://www.instagram.com/'><img src='instagram.png' alt=''> Instagram</a></p>
+                <p><a href='https://x.com/'><img src='X.png' alt=''> X</a></p>
+            </div>
+
+            <div class="footer-club">
+                <h2>LENS CLUB</h2>
+                <p>PEOPLE · PLACES · PERSPECTIVES</p>
+            </div>
+        <div class="footer-contact">
+            <h2>Contact Us</h2>
+
+                <p> <img src="phone.png" alt="Phone">
+                <a href="tel:+966555655555">+966 555655555</a></p>
+                <p><img src="email.png" alt="Email">
+                <a href="mailto:LensClub@lensclub.com">LensClub@lensclub.com</a></p>
+                <p><img src="location.png" alt="Location">
+                <a href="https://www.google.com/maps/search/?api=1&query=King+Saud+University+Riyadh" target="_blank">
+                King Saud University - Riyadh </a></p>
+            </div>
+
+        </div>
+
+        <p class="copyright">&copy; LENS CLUB 2026. All rights reserved.</p>
+    </footer>
+
+    <script src="theme.js"></script>
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector(".request-info-form");
+    const fullname = document.getElementById("fullname");
+    const email = document.getElementById("email");
+    const offering = document.getElementById("offering");
+    const date = document.getElementById("date");
+
+    const requestsList = document.createElement("div");
+    requestsList.id = "new-requests";
+    form.insertAdjacentElement("afterend", requestsList);
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nameValue = fullname.value.trim();
+        const emailValue = email.value.trim();
+        const offeringValue = offering.value;
+        const dateValue = date.value;
+
+        if (offeringValue === "") {
+            alert("Please select an offering.");
+            return;
+        }
+
+        if (nameValue === "") {
+            alert("Please enter your full name.");
+            return;
+        }
+
+        const namePattern = /^[\p{L}]+(?:\s+[\p{L}]+)+$/u;
+
+        if (!namePattern.test(nameValue)) {
+            alert("Please enter a valid full name without numbers or special characters.");
+            return;
+        }
+
+        if (emailValue === "" || !email.validity.valid) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        if (dateValue === "") {
+            alert("Please select a preferred date.");
+            return;
+        }
+
+        const today = new Date();
+        const currentDate =
+            today.getFullYear() + "-" +
+            String(today.getMonth() + 1).padStart(2, "0") + "-" +
+            String(today.getDate()).padStart(2, "0");
+
+        if (dateValue <= currentDate) {
+            alert("Please select a future date.");
+            return;
+        }
+
+        const offeringName =
+            offering.options[offering.selectedIndex].text;
+
+        const returnToDashboard = confirm(
+            "Your request has been sent successfully!\n\n" +
+            "Click OK to return to Member Dashboard.\n" +
+            "Click Cancel to stay on this page."
+        );
+
+        if (returnToDashboard) {
+            window.location.href = "member-dashboard.html";
+        } else {
+            const request = document.createElement("div");
+            request.style.border = "1px solid #ccc";
+            request.style.padding = "15px";
+            request.style.margin = "15px 0";
+            request.style.borderRadius = "8px";
+
+            const title = document.createElement("h3");
+            title.textContent = "Participation Request";
+
+            const offeringText = document.createElement("p");
+            offeringText.textContent = "Offering: " + offeringName;
+
+            const nameText = document.createElement("p");
+            nameText.textContent = "Member Name: " + nameValue;
+
+            const dateText = document.createElement("p");
+            dateText.textContent = "Preferred Date: " + dateValue;
+
+            request.appendChild(title);
+            request.appendChild(offeringText);
+            request.appendChild(nameText);
+            request.appendChild(dateText);
+
+            requestsList.appendChild(request);
+            form.reset();
+        }
+    });
+});
+</script> 
+</body>
+
+</html>
