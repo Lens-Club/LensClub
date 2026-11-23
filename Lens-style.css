@@ -1,6 +1,3 @@
- /* ========================================
-   0. SHARED PAGE DEFAULTS
-   ======================================== */
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -1774,5 +1771,84 @@ body.dark #backToTop:hover {
 @media (max-width: 768px) {
     .reviews-container .card {
         flex: 1 1 100%;
+    }
+}
+
+/* Photography Tip Button */
+
+#next-tip {
+    background-color: #344B3F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#next-tip:hover {
+    background-color: #25382F;
+}
+
+/* Dark Theme */
+
+body.dark #next-tip {
+    background-color: #d8e7da;
+    color: #25382F;
+}
+
+body.dark #next-tip:hover {
+    background-color: #C3D8C6;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    .tip {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tip img {
+        max-width: 100%;
+    }
+
+    .tip div {
+        max-width: 100%;
+    }
+}
+
+/* Manager Dashboard - Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    .manager-actions {
+        flex-direction: column;
+        margin: 16px 12px;
+        gap: 12px;
+    }
+
+    .manager-actions a {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 16px;
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .manager-actions img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .manager-offerings {
+        margin: 20px 12px;
+    }
+
+    .manager-offerings-table th,
+    .manager-offerings-table td {
+        padding: 10px;
     }
 }
